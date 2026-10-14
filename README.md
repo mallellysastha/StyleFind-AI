@@ -1,4 +1,7 @@
-# ? StyleFind AI: AI-Powered Image Clustering & Style Prediction
+# 🌐 StyleFind AI: Model Arena & Image Clustering
+
+> **Live Public URL**: [https://mallellysastha.github.io/StyleFind-AI/](https://mallellysastha.github.io/StyleFind-AI/)
+
 
 **StyleFind AI** is an interactive computer vision and machine learning platform combining **Supervised Classification** and **Unsupervised Image Clustering** powered by Scikit-Learn, Streamlit, and Plotly.
 
@@ -24,7 +27,7 @@ The application is running locally at:
 
 ### 2. ? AI Image Clustering (Unsupervised Learning)
 - **Workflow**: Multi-image batch &rarr; Standardized Preprocessing &rarr; 50-D Feature Vectors &rarr; K-Means / Hierarchical / DBSCAN &rarr; 2D PCA Space &rarr; Interactive Cluster Visualizer &rarr; Cluster Gallery.
-- **Dataset Options**: Upload 10�50 custom images or 1-click Quick-Load curated Fashion Batches (15, 30, or 50 diverse items).
+- **Dataset Options**: Upload 1050 custom images or 1-click Quick-Load curated Fashion Batches (15, 30, or 50 diverse items).
 - **Interactive 2D Visualization**: Interactive Plotly scatter plot mapping images in PCA space with cluster color-coding and item hover details.
 - **Elbow Method Optimizer**: "Find Optimal K" calculates inertia across $K=2 \dots 8$ and mathematically detects the optimal knee/elbow point.
 - **Cluster Gallery Cards**: Visual card per cluster with thumbnail grids and expandable inspections.
