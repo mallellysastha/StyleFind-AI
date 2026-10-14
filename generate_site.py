@@ -99,7 +99,7 @@ html = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StyleFind AI — Model Arena</title>
+<title>StyleFind AI &mdash; Model Arena</title>
 <meta name="description" content="Compare Random Forest, Logistic Regression and KNN on Fashion-MNIST.">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap">
@@ -274,9 +274,9 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
 <!-- Hero Section -->
 <div class="hero">
   <div>
-    <span class="tag mono">SUPERVISED LEARNING · FASHION-MNIST</span>
+    <span class="tag mono">SUPERVISED LEARNING &middot; FASHION-MNIST</span>
     <h1 style="font-size:64px;line-height:1.02;margin:20px 0">Three models enter. <span style="color:#C8F169">Random Forest</span> takes the spotlight.</h1>
-    <p class="muted" style="font-size:18px;line-height:1.6;max-width:520px;margin:0 0 28px">Classify 28×28 clothing images into 10 categories, then see how a tuned Random Forest stacks up against Logistic Regression and K-Nearest Neighbours, all trained on the same scaled, PCA-reduced pixels.</p>
+    <p class="muted" style="font-size:18px;line-height:1.6;max-width:520px;margin:0 0 28px">Classify 28&times;28 clothing images into 10 categories, then see how a tuned Random Forest stacks up against Logistic Regression and K-Nearest Neighbours, all trained on the same scaled, PCA-reduced pixels.</p>
     <a class="btn" href="#live-demo">Try the classifier</a>
     <a class="btn ghost" href="#arena">See the comparison</a>
   </div>
@@ -284,7 +284,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
   <!-- Live Prediction Widget -->
   <div class="panel" id="live-demo">
     <div style="display:flex; justify-content:space-between; align-items:center;">
-      <div class="mono muted" style="font-size:13px">LIVE PREDICTION · RANDOM FOREST</div>
+      <div class="mono muted" style="font-size:13px">LIVE PREDICTION &middot; RANDOM FOREST</div>
       <span class="badge badge-lime" id="source-badge">SAMPLE #0</span>
     </div>
 
@@ -294,7 +294,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
       <img id="preview-img" class="preview-img" src="{samples_data[0]['img']}" alt="Fashion Sample">
       <div id="drop-hint" class="muted" style="font-size:13px; line-height:1.4">
         Drop an image or click to upload<br>
-        <span style="font-size:11px; color:#5c7064">Auto-scaled & inverted to 28×28 pixels</span>
+        <span style="font-size:11px; color:#5c7064">Auto-scaled & inverted to 28&times;28 pixels</span>
       </div>
     </div>
 
@@ -321,9 +321,9 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
     <!-- Test Sample Navigator -->
     <div class="sample-bar">
       <div style="display:flex; align-items:center; gap:6px;">
-        <button class="btn-sm" onclick="stepSample(-1)" title="Previous sample">◀ Prev</button>
-        <button class="btn-sm" onclick="randomSample()" title="Random sample">🎲 Random</button>
-        <button class="btn-sm" onclick="stepSample(1)" title="Next sample">Next ▶</button>
+        <button class="btn-sm" onclick="stepSample(-1)" title="Previous sample">&#9664; Prev</button>
+        <button class="btn-sm" onclick="randomSample()" title="Random sample">&#127922; Random</button>
+        <button class="btn-sm" onclick="stepSample(1)" title="Next sample">Next &#9654;</button>
       </div>
       <span class="mono muted" style="font-size:12px" id="sample-counter">1 of 300</span>
     </div>
@@ -342,7 +342,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
     </div>
     <div class="step">
       <div class="n mono">02</div>
-      <h3 style="font-size:20px;margin:8px 0">PCA · 50</h3>
+      <h3 style="font-size:20px;margin:8px 0">PCA &middot; 50</h3>
       <div class="muted" style="font-size:14px">Compresses 784 pixels into 50 orthogonal components.</div>
     </div>
     <div class="step">
@@ -365,7 +365,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
       <h2 style="font-size:36px;margin-bottom:8px">The arena</h2>
       <p class="muted" style="margin:0">Numbers filled in from <span class="mono" style="color:#C8F169">results.json</span> after running <span class="mono">train.py</span> on Fashion-MNIST.</p>
     </div>
-    <button class="btn-sm" style="padding:10px 16px; font-size:13px;" onclick="openCMModal()">Inspect Confusion Matrices ↗</button>
+    <button class="btn-sm" style="padding:10px 16px; font-size:13px;" onclick="openCMModal()">Inspect Confusion Matrices &#8599;</button>
   </div>
 
   <div class="arena">
@@ -373,7 +373,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
     <div class="card">
       <h3 style="font-size:26px">Logistic Regression</h3>
       <div class="sub">Linear baseline, fast and simple.</div>
-      <div class="row"><span>Tuned grid</span><span>C: 0.1 · 1 · 10</span></div>
+      <div class="row"><span>Tuned grid</span><span>C: 0.1 &middot; 1 &middot; 10</span></div>
       <div class="row"><span>Baseline accuracy</span><span>{lr_base}</span></div>
       <div class="row"><span>CV macro-F1</span><span>{lr_cv}</span></div>
       <div class="row"><span>Test accuracy</span><span>{lr_test_acc}</span></div>
@@ -386,8 +386,8 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
       <span class="mono" style="font-size:12px; font-weight:700; letter-spacing:0.05em;">SPOTLIGHT WINNER</span>
       <h3 style="font-size:30px">Random Forest</h3>
       <div class="sub">Many decision trees voting together.</div>
-      <div class="row"><span>Tuned grid</span><span>trees 100 · 200</span></div>
-      <div class="row"><span>Max depth</span><span>None · 20</span></div>
+      <div class="row"><span>Tuned grid</span><span>trees 100 &middot; 200</span></div>
+      <div class="row"><span>Max depth</span><span>None &middot; 20</span></div>
       <div class="row"><span>Baseline accuracy</span><span>{rf_base}</span></div>
       <div class="row"><span>CV macro-F1</span><span>{rf_cv}</span></div>
       <div class="row"><span>Test accuracy</span><span>{rf_test_acc}</span></div>
@@ -399,8 +399,8 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
     <div class="card">
       <h3 style="font-size:26px">K-Nearest Neighbours</h3>
       <div class="sub">Finds the closest look-alikes.</div>
-      <div class="row"><span>Neighbours</span><span>3 · 5 · 9</span></div>
-      <div class="row"><span>Weights</span><span>uniform · distance</span></div>
+      <div class="row"><span>Neighbours</span><span>3 &middot; 5 &middot; 9</span></div>
+      <div class="row"><span>Weights</span><span>uniform &middot; distance</span></div>
       <div class="row"><span>Baseline accuracy</span><span>{knn_base}</span></div>
       <div class="row"><span>CV macro-F1</span><span>{knn_cv}</span></div>
       <div class="row"><span>Test accuracy</span><span>{knn_test_acc}</span></div>
@@ -453,7 +453,7 @@ h1,h2,h3 {{ font-family: 'Bricolage Grotesque', sans-serif; margin: 0; letter-sp
         <h3 style="font-size:24px">Test Set Confusion Matrix</h3>
         <p class="muted" style="font-size:13px; margin:4px 0 0">Actual rows vs. Predicted columns (10,000 Fashion-MNIST test images)</p>
       </div>
-      <button class="btn-sm" onclick="closeCMModal()">✕ Close</button>
+      <button class="btn-sm" onclick="closeCMModal()">&times; Close</button>
     </div>
 
     <!-- Model Switcher Tabs in Modal -->
